@@ -120,3 +120,12 @@ ext_tracks %>%
 ext_tracks %>%
   select(storm_name, month, day, hour, latitude, longitude, max_wind, contains("ne")) %>%
   filter(is.na(radius_34_ne))
+
+# Working with dates, times, time zones
+install.packages("tidyverse")
+library(tidyverse)
+library(lubridate) 
+
+ymd("2006-03-12")
+ymd("'06 March 12")
+ymd_hm("06/3/12 6:30PM")
